@@ -25,7 +25,7 @@ class ShoppingCart:
         print(f"Total: Ksh {self.calculate_total():.2f}\n")
 
 
-class DicountedCart(ShoppingCart):
+class DiscountedCart(ShoppingCart):
     def __init__(self, discount_rate: float):
         super().__init__()
         self.discount_rate = discount_rate 
@@ -67,7 +67,7 @@ if __name__ == "__main__":
     checkout(obj_cart)
 
     # 2) Discounted Cart
-    disc_cart = DicountedCart(discount_rate=0.15)
+    disc_cart = DiscountedCart(discount_rate=0.15)
     disc_cart.add_item("Papaya", 76, 6.20)
     disc_cart.add_item("Orange", 96, 11.50)
     disc_cart.add_item("Kiwi", 85, 9.60)
